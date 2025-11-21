@@ -28,14 +28,21 @@
         <span>VIRANG PATEL</span>
       </div>
 
-      <nav>
+      <!-- MOBILE NAV TOGGLE -->
+      <button id="navToggle">☰</button>
+
+      <!-- NAVIGATION -->
+      <nav id="mainNav">
         <a href="#about">About</a>
+        <a href="#experience">Trajectory</a>
+        <a href="#expertise">Expertise</a>
         <a href="#impact">Microsoft Impact</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#architecture">Architecture</a>
-        <a href="#journey">Journey &amp; Identity</a>
+        <a href="#journey">Journey & Identity</a>
         <a href="#promptive">Promptive Studio</a>
         <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -70,26 +77,16 @@
             </div>
 
             <div class="metric-strip">
-              <div class="metric-pill">
-                <span class="metric-label">Secure Score</span>
-                <span class="metric-value">+14 pts</span>
+              <div class="metric-pill"><span class="metric-label">Secure Score</span><span class="metric-value">+14
+                  pts</span></div>
+              <div class="metric-pill"><span class="metric-label">MTTR</span><span class="metric-value">–38%</span>
               </div>
-              <div class="metric-pill">
-                <span class="metric-label">MTTR</span>
-                <span class="metric-value">–38%</span>
+              <div class="metric-pill"><span class="metric-label">Load Time</span><span class="metric-value">–45%</span>
               </div>
-              <div class="metric-pill">
-                <span class="metric-label">Load Time</span>
-                <span class="metric-value">–45%</span>
-              </div>
-              <div class="metric-pill">
-                <span class="metric-label">ADX Compute</span>
-                <span class="metric-value">–40%</span>
-              </div>
-              <div class="metric-pill">
-                <span class="metric-label">Manual Ops</span>
-                <span class="metric-value">–70%</span>
-              </div>
+              <div class="metric-pill"><span class="metric-label">ADX Compute</span><span
+                  class="metric-value">–40%</span></div>
+              <div class="metric-pill"><span class="metric-label">Manual Ops</span><span
+                  class="metric-value">–70%</span></div>
             </div>
           </div>
 
@@ -144,40 +141,23 @@
           <div class="section-kicker">About</div>
           <h2>Who I Am as an Engineer</h2>
           <p class="section-description">
-            I’m a senior data engineer who builds production-grade telemetry, security,
-            and analytics systems that Microsoft teams rely on for decisions. My work
-            blends architectural discipline, clarity, and a bias-for-action that
-            drives measurable impact within days—not quarters.
+            I build production-grade telemetry, security, and analytics systems that Microsoft teams rely on.
+            My approach blends architecture, clarity, and a bias-for-action that produces measurable impact within
+            days—not quarters.
           </p>
         </div>
 
         <div class="grid-2">
-
-          <!-- LEFT COLUMN: TEXT -->
           <div>
             <ul class="bullet-list">
-              <li>
-                <strong>Microsoft-grade telemetry engineer</strong> focused on Fabric, ADX/KQL,
-                PBIP, and lakehouse-driven architectures powering M365, E+D SFI, AVS, Hopper,
-                Firmware, MSX, and S360 programs.
-              </li>
-
-              <li>
-                Known for <strong>joining complex environments and delivering clarity fast</strong>:
-                governed data flows, hardened semantic layers, cost-optimized KQL engines,
-                and executive-ready dashboards.
-              </li>
-
-              <li>
-                <strong>Cross-disciplinary thinker</strong>: medical training, entrepreneurial
-                experience, and cloud engineering give me a unique perspective on problem-solving,
-                structure, and system reliability.
-              </li>
-
-              <li>
-                <strong>Impact-driven execution:</strong> Secure Score uplift, MTTR reduction,
-                performance tuning, and eliminating 60–70% manual ops through automation.
-              </li>
+              <li><strong>Microsoft-grade telemetry engineer</strong> focused on Fabric, ADX/KQL, PBIP, and
+                lakehouse-driven architectures powering M365, SFI, AVS, Hopper, Firmware, MSX, and S360 programs.</li>
+              <li><strong>Clarity-first execution:</strong> governed data flows, hardened semantic layers, optimized KQL
+                engines, and executive-ready dashboards.</li>
+              <li><strong>Cross-disciplinary thinker:</strong> medical training, entrepreneurial ownership, and cloud
+                engineering inform my system-level decision-making.</li>
+              <li><strong>Impact-driven:</strong> Secure Score uplift, MTTR reduction, KQL performance tuning, and
+                cutting manual ops by 60–70%.</li>
             </ul>
 
             <div class="pill-row" style="margin-top:12px;">
@@ -194,11 +174,9 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: PHOTO -->
           <div class="about-photo-wrapper">
             <img src="assets/virang-profile.jpeg" alt="Portrait of Virang Patel" class="about-photo" />
           </div>
-
         </div>
       </section>
 
@@ -206,97 +184,78 @@
       <section id="experience" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Trajectory</div>
-          <h2>How engineering, finance &amp; ownership intersect for me</h2>
+          <h2>How engineering, finance & ownership intersect for me</h2>
           <p class="section-description">
-            I don’t just build dashboards or pipelines in isolation. My work is shaped by reading P&amp;Ls,
-            understanding assets and liabilities, and owning the outcomes of systems that real businesses
-            depend on—whether that’s a Microsoft security program, a hotel portfolio, or a finance-heavy
-            small business.
+            My work is shaped by telemetry, P&Ls, operational models, and ownership mindset. Whether engineering for
+            Microsoft,
+            operating hotels, or advising small businesses — I treat data as a living system tied to risk, cost, and
+            opportunity.
           </p>
         </div>
 
         <div class="timeline">
-          <!-- PHASE 1: CURRENT -->
+
+          <!-- PHASE 1 -->
           <div class="timeline-item">
-            <h3>Current · Senior Data Engineer &amp; Fabric Architect</h3>
-            <p>
-              I design telemetry and analytics systems the way a CFO looks at a P&amp;L—every signal needs
-              to tie back to risk, cost, or opportunity. Across M365, E+D SFI, AVS, Hopper, Firmware, MSX,
-              and S360 programs, I build Fabric/ADX/PBIP architectures that behave like live financial
-              statements for security posture, capacity, and reliability.
+            <h3>Current · Senior Data Engineer & Fabric Architect</h3>
+            <p>I design telemetry systems the way a CFO reads a P&L — every signal tied to risk, cost, and opportunity.
             </p>
             <ul class="bullet-list">
-              <li>Turn scattered, manual reporting into governed “income statements” for security and reliability.</li>
-              <li>Model Secure Score, MTTR, and capacity like margin, working capital, and utilization.</li>
-              <li>Frame telemetry tradeoffs in terms of cost of capital, risk exposure, and ROI on engineering effort.
-              </li>
+              <li>Gov-ready “income statements” for Secure Score, MTTR, capacity, reliability.</li>
+              <li>KPI modeling aligned to margin, utilization, working capital logic.</li>
+              <li>Fabric + ADX engines treated as real-time operational models.</li>
             </ul>
           </div>
 
-          <!-- PHASE 2: MULTI-INDUSTRY DATA & BI CONSULTING -->
+          <!-- PHASE 2 -->
           <div class="timeline-item">
-            <h3>Ongoing · Data &amp; BI Consultant for finance-driven teams</h3>
-            <p>
-              Since the early 2010s I’ve been building analytics for operators who live inside Excel models,
-              P&amp;Ls, and board decks. That includes Tableau and Power BI solutions for finance, healthcare,
-              hospitality, and small businesses that needed clean signal on cash, runway, and performance.
-            </p>
+            <h3>Ongoing · Data & BI Consultant</h3>
+            <p>Since the early 2010s I've built analytics for finance, healthcare, hospitality, and SMBs.</p>
             <ul class="bullet-list">
-              <li>Tableau and Power BI in production since 2013 for FP&amp;A, revenue, and operational reporting.</li>
-              <li>Design KPIs that actually reconcile back to the general ledger, not just “nice charts.”</li>
-              <li>Help teams move from spreadsheet-heavy workflows to governed, refreshable BI systems.</li>
+              <li>Tableau + Power BI for real-world revenue, cash, and operations.</li>
+              <li>KPIs that reconcile to the GL — not surface-level charts.</li>
+              <li>Replacing Excel-heavy workflows with governed BI systems.</li>
             </ul>
           </div>
 
-          <!-- PHASE 3: PRODUCT & TOOL BUILDER -->
+          <!-- PHASE 3 -->
           <div class="timeline-item">
-            <h3>Promptive Studio · Building reusable analytics products</h3>
-            <p>
-              Under the Promptive brand, I treat dashboards and data models like products: opinionated,
-              documented, and ready to slot into a real business. That includes finance packs, telemetry
-              kits, and PBIP templates that can shorten the distance between raw data and a board-ready view.
-            </p>
+            <h3>Promptive Studio · Analytics Products</h3>
+            <p>I build reusable PBIP templates, diagnostic kits, and telemetry packs.</p>
             <ul class="bullet-list">
-              <li>Design PBIP templates for security posture, telemetry readiness, and financial performance.</li>
-              <li>Build diagnostic tools that surface cost leaks, underutilized assets, and noisy metrics.</li>
-              <li>Create patterns that can be reused by multiple businesses—not just one internal team.</li>
+              <li>PBIP templates for posture, readiness, financial intelligence.</li>
+              <li>Diagnostic tools surfacing cost leaks & signal quality issues.</li>
+              <li>Reusable architectures for multiple businesses & orgs.</li>
             </ul>
           </div>
 
-          <!-- PHASE 4: ENTREPRENEURSHIP & HOSPITALITY -->
+          <!-- PHASE 4 -->
           <div class="timeline-item">
-            <h3>Entrepreneur · Hotel portfolio, operations &amp; web presence</h3>
-            <p>
-              Before deep cloud engineering, I helped operate and grow a portfolio of hotels across the U.S.
-              That meant caring about RevPAR, ADR, occupancy, labor ratios, and capital projects—and building
-              the reporting, websites, and tools that made those numbers move in the right direction.
-            </p>
+            <h3>Entrepreneur · Hotels, Operations, Web</h3>
+            <p>Before deep cloud engineering, I operated a hotel portfolio across the US.</p>
             <ul class="bullet-list">
-              <li>Learned to read P&amp;Ls, balance sheets, and cash-flow statements as a daily operating tool.</li>
-              <li>Built hospitality websites and reporting to align marketing, operations, and ownership goals.</li>
-              <li>Developed an instinct for how data, pricing, and operations connect to asset performance.</li>
+              <li>Daily P&L, occupancy, ADR, RevPAR, labor ratios.</li>
+              <li>Hospitality websites + reporting aligned to ownership goals.</li>
+              <li>Deep instinct for how pricing + operations drive asset value.</li>
             </ul>
           </div>
 
-          <!-- PHASE 5: FOUNDATION -->
+          <!-- PHASE 5 -->
           <div class="timeline-item">
-            <h3>Foundation · Medical training &amp; systems thinking</h3>
-            <p>
-              My medical background trained me to think in systems: inputs, signals, thresholds, interventions.
-              Today, I apply that mindset to telemetry and financial/operational data—treating each platform
-              like a living system that needs clear diagnostics, triage, and long-term care.
-            </p>
+            <h3>Foundation · Medical Training</h3>
+            <p>I approach telemetry like physiology: inputs → thresholds → interventions.</p>
             <ul class="bullet-list">
-              <li>Approach telemetry, finance, and operations with a diagnostic, hypothesis-driven mindset.</li>
-              <li>Value traceability, documentation, and clear narratives around risk and outcomes.</li>
-              <li>Stay calm under pressure when decisions involve real money, real customers, and real risk.</li>
+              <li>Diagnostic mindset applied to engineering & finance.</li>
+              <li>Clear narratives about risk & system behavior.</li>
+              <li>Calm decision-making under pressure.</li>
             </ul>
           </div>
+
         </div>
 
         <div class="hero-actions" style="margin-top:20px;">
           <a class="btn btn-primary" href="#portfolio">See how this shows up in my work →</a>
-          <a class="btn btn-ghost" href="#contact">Talk about your P&amp;L &amp; data needs</a>
+          <a class="btn btn-ghost" href="#contact">Talk about your P&L & data needs</a>
         </div>
       </section>
 
@@ -306,23 +265,20 @@
           <div class="section-kicker">Expertise</div>
           <h2>What I Bring to Engineering Teams</h2>
           <p class="section-description">
-            My work combines Microsoft Fabric, ADX/KQL, and PBIP engineering into a unified
-            architecture that turns fragmented telemetry into fast, reliable decision systems.
+            I unify Fabric, ADX, PBIP, and telemetry design into reliable, scalable decision systems.
           </p>
         </div>
 
         <div class="two-column">
-
-          <!-- LEFT COLUMN -->
           <div class="highlight-box">
-            <strong>Microsoft Fabric &amp; Lakehouse Architecture</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>Leader–Follower lakehouse patterns for cost-efficient ingestion + compute offloading.</li>
-              <li>Bronze → Silver → Gold pipelines with schema contracts, freshness checks, and validation logic.</li>
-              <li>SQL Endpoint modeling: star schemas, incremental snapshots, Direct Lake scalability.</li>
-              <li>Fabric pipeline orchestration for security posture, reliability, and field telemetry workloads.</li>
+            <strong>Fabric & Lakehouse Architecture</strong>
+            <ul class="bullet-list">
+              <li>Leader–Follower lakehouse ingestion & compute offloading</li>
+              <li>Bronze → Silver → Gold with contracts, validation, freshness</li>
+              <li>Star schemas, DirectLake, incremental snapshots</li>
+              <li>Fabric pipelines for posture, field, and reliability telemetry</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">Fabric</div>
               <div class="pill strong">Lakehouse</div>
               <div class="pill">Pipelines</div>
@@ -330,37 +286,33 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN -->
           <div class="highlight-box">
-            <strong>ADX / Kusto Engineering &amp; Optimization</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>KQL pre-aggregations, materialized views, and workload-aware optimization.</li>
-              <li>Telemetry normalization for identity, device, incident, risk event, and policy entities.</li>
-              <li>Dynamic functions + macros for multi-cluster ingestion, wave tracking, and SLA engines.</li>
-              <li>Compute reduction patterns: cache tables, summarization layers, and result-set reuse.</li>
+            <strong>ADX / Kusto Engineering</strong>
+            <ul class="bullet-list">
+              <li>KQL pre-aggregations & materialized views</li>
+              <li>Identity/device/incident/risk event normalization</li>
+              <li>Multi-cluster ingestion, macros, dynamic functions</li>
+              <li>Compute reduction: caches, summarization, reuse layers</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">ADX</div>
               <div class="pill strong">KQL</div>
               <div class="pill">MVs</div>
               <div class="pill">Functions</div>
             </div>
           </div>
-
         </div>
 
         <div class="two-column" style="margin-top:16px;">
-
-          <!-- LEFT COLUMN -->
           <div class="highlight-box">
-            <strong>Power BI PBIP Engineering &amp; Semantic Modeling</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>Modular PBIP navigation systems with enterprise-ready folder structures.</li>
-              <li>Semantic models with calc groups, metrics layers, and RLS/OLS governance.</li>
-              <li>Direct Lake models optimized for sub-2s load and enterprise distribution.</li>
-              <li>Executive reporting for security leaders, engineering V-teams, and field organizations.</li>
+            <strong>PBIP Engineering</strong>
+            <ul class="bullet-list">
+              <li>Modular PBIP structures & navigation systems</li>
+              <li>Calc groups, metrics layers, RLS/OLS governance</li>
+              <li>DirectLake models optimized sub-2s</li>
+              <li>Exec reporting for security & ops V-teams</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">PBIP</div>
               <div class="pill">DAX</div>
               <div class="pill">Direct Lake</div>
@@ -368,23 +320,21 @@
             </div>
           </div>
 
-          <!-- RIGHT COLUMN -->
           <div class="highlight-box">
-            <strong>Security, Reliability &amp; Telemetry Systems</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>Security posture modeling across Defender, Entra, Intune, Purview, and Azure Policy.</li>
-              <li>SFI Wave telemetry engines with snapshot logic and governance KPIs.</li>
-              <li>Capacity forecasting + engineering constraint alignment for AVS + MSX pipeline.</li>
-              <li>Firmware freshness scoring, SLA cycles, and buildout automation maturity tracking.</li>
+            <strong>Security & Telemetry Systems</strong>
+            <ul class="bullet-list">
+              <li>Defender, Entra, Intune, Purview, Policy telemetry modeling</li>
+              <li>SFI Waves + snapshot history engines</li>
+              <li>AVS + MSX capacity/pipeline alignment</li>
+              <li>Firmware Freshness & buildout automation</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">Secure Score</div>
               <div class="pill strong">SFI</div>
               <div class="pill">AVS</div>
               <div class="pill">S360</div>
             </div>
           </div>
-
         </div>
 
         <div class="hero-actions" style="margin-top:24px;">
@@ -397,59 +347,49 @@
       <section id="services" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Services</div>
-          <h2>How I help companies build reliable, insight-driven systems</h2>
+          <h2>How I help companies build reliable systems</h2>
           <p class="section-description">
-            Beyond engineering roles, I work with teams and business owners to build
-            telemetry, analytics, and financial intelligence systems that improve
-            decision-making, reduce manual work, and align operations with reality.
+            Beyond engineering roles, I work with organizations to build telemetry, analytics,
+            and financial intelligence systems that ground decisions in reality.
           </p>
         </div>
 
         <div class="two-column">
-
-          <!-- LEFT COLUMN: ENGINEERING SERVICES -->
           <div class="highlight-box">
             <strong>Telemetry, Security & Data Engineering</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>Fabric lakehouse design • ADX/KQL engines • PBIP enterprise models.</li>
-              <li>Security posture dashboards (Secure Score, SFI, zero-trust maturity).</li>
-              <li>Operational telemetry (Hopper NRT, Firmware SLAs, AVS capacity).</li>
-              <li>Pipeline design for ingestion, cleansing, modeling & governance.</li>
+            <ul class="bullet-list">
+              <li>Fabric lakehouse design • ADX engines • PBIP models</li>
+              <li>Security posture dashboards (Secure Score, SFI)</li>
+              <li>Operational telemetry: Hopper NRT, Firmware, AVS</li>
+              <li>Ingestion, cleansing, modeling, governance pipelines</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">Fabric</div>
               <div class="pill strong">ADX/KQL</div>
-              <div class="pill strong">Power BI PBIP</div>
+              <div class="pill strong">PBIP</div>
             </div>
           </div>
 
-          <!-- RIGHT COLUMN: BUSINESS & FINANCE SERVICES -->
           <div class="highlight-box">
-            <strong>Business Analytics, Finance & Small-Business Intelligence</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>P&L-aware dashboards that reconcile back to actual financials.</li>
-              <li>Real-time revenue, cash-flow, and operational KPI systems.</li>
-              <li>Tableau & Power BI reporting for hospitality, healthcare & SMBs.</li>
-              <li>Tools for asset performance, pricing impact & operational efficiency.</li>
+            <strong>Business & Finance Systems</strong>
+            <ul class="bullet-list">
+              <li>P&L-aware dashboards that reconcile to actuals</li>
+              <li>Revenue, cash-flow & operational KPIs</li>
+              <li>Tableau + Power BI across hospitality & SMBs</li>
+              <li>Asset performance, pricing, operational efficiency tools</li>
             </ul>
-            <div class="pill-row" style="margin-top:10px;">
+            <div class="pill-row">
               <div class="pill strong">P&L Analysis</div>
               <div class="pill">Cash-flow IQ</div>
               <div class="pill">SMB Analytics</div>
               <div class="pill">Hospitality</div>
             </div>
           </div>
-
         </div>
 
-        <!-- CALL TO ACTION -->
         <div class="hero-actions" style="margin-top:24px;">
-          <a class="btn btn-primary" href="#contact">
-            Discuss your telemetry or business analytics needs →
-          </a>
-          <a class="btn btn-ghost" href="mailto:virang@virangpatel.ai">
-            Email me directly
-          </a>
+          <a class="btn btn-primary" href="#contact">Discuss your telemetry or BI needs →</a>
+          <a class="btn btn-ghost" href="mailto:virang@virangpatel.ai">Email me</a>
         </div>
       </section>
 
@@ -459,21 +399,16 @@
           <div class="section-kicker">Microsoft Impact</div>
           <h2>Telemetry systems that move real KPIs</h2>
           <p class="section-description">
-            I build platforms that change how Microsoft engineering, security, and field teams see their world:
-            Secure Score, MTTR, capacity, firmware SLAs, and geo-readiness all surfaced in governed, reusable
-            telemetry systems.
+            I build governed telemetry systems powering decisions throughout Microsoft.
           </p>
         </div>
 
         <div class="portfolio-grid">
+          <!-- CARDS (unchanged) -->
           <div class="card">
             <h3>M365 Security Health Dashboard</h3>
-            <p>
-              Unified security telemetry across Defender, Entra, Intune, Purview, Azure, and S360 into a governed,
-              Fabric-backed PBIP system for security leadership.
-            </p>
-            <p><strong>Key KPIs:</strong> +14 pt Secure Score uplift, –38% MTTR, –45% report load time,
-              ~70% reduction in manual reporting effort.</p>
+            <p>Unified security telemetry across the ecosystem.</p>
+            <p><strong>KPIs:</strong> +14 pt Secure Score, –38% MTTR, –45% load time, –70% manual reporting.</p>
             <div class="chip-row">
               <span class="chip accent">Fabric + ADX</span>
               <span class="chip">Secure Score</span>
@@ -483,75 +418,48 @@
 
           <div class="card">
             <h3>E+D SFI Security Wave Engine</h3>
-            <p>
-              Seven-wave, 90-day security maturity engine across identity, device, network isolation, and compliance —
-              including historical snapshots and burndown tracking for Zero Trust-aligned objectives.
-            </p>
-            <p><strong>Key KPIs:</strong> SFI wave completion, backlog burndown, and auditable wave history for
-              leadership reviews.</p>
+            <p>Seven-wave maturity engine with historical snapshots.</p>
             <div class="chip-row">
               <span class="chip accent">SFI Waves 1–7</span>
               <span class="chip">Governance</span>
-              <span class="chip">Historical snapshots</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Hopper Deployment Tracker — NRT Telemetry</h3>
-            <p>
-              Dual-ingestion engine with 30-minute NRT telemetry, fault saturation tracking, and SLA gates, giving
-              release managers a live read on deployment health.
-            </p>
-            <p><strong>Key KPIs:</strong> rollout health, fault saturation, SLA adherence, and steady-state readiness.
-            </p>
+            <h3>Hopper Deployment Tracker — NRT</h3>
+            <p>30-minute NRT telemetry for release health.</p>
             <div class="chip-row">
-              <span class="chip accent">NRT (30 min)</span>
+              <span class="chip accent">NRT</span>
               <span class="chip">SLA tracking</span>
-              <span class="chip">Release readiness</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>AVS Field Capacity &amp; MSX Deal Pipeline</h3>
-            <p>
-              Combined regional AVS capacity telemetry with MSX pipeline milestones to validate 20+ node deals prior
-              to commitment, reducing escalations and surprises.
-            </p>
-            <p><strong>Key KPIs:</strong> capacity vs. pipeline alignment, at-risk deals, and regional readiness.</p>
+            <h3>AVS Capacity & MSX Pipeline</h3>
+            <p>Combining field capacity telemetry with pipeline signals.</p>
             <div class="chip-row">
               <span class="chip accent">AVS</span>
-              <span class="chip">Capacity &amp; pipeline</span>
-              <span class="chip">Field decisions</span>
+              <span class="chip">Capacity</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Firmware Freshness &amp; AVS SDDC Maintenance</h3>
-            <p>
-              SLA-compliance dashboards for host patch cycles and firmware “LKG” tracking, aligned with CHIE key
-              results and fleet reliability metrics.
-            </p>
-            <p><strong>Key KPIs:</strong> firmware freshness score, SLA compliance, and zero-day exposure windows.</p>
+            <h3>Firmware Freshness</h3>
+            <p>SLA cycles, LKG tracking, fleet reliability metrics.</p>
             <div class="chip-row">
-              <span class="chip accent">Firmware freshness</span>
+              <span class="chip accent">Firmware</span>
               <span class="chip">35-day SLA</span>
-              <span class="chip">Fleet telemetry</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>GeoExpansion Buildout Automation (S360)</h3>
-            <p>
-              Tier-3 Fabric pipelines (Clear → Ingest → Transform → Merge) to track region readiness, automation
-              maturity (Level 2→3), and signal posting compliance for global expansion.
-            </p>
-            <p><strong>Key KPIs:</strong> region readiness, automation maturity, and signal completeness.</p>
+            <h3>GeoExpansion Automation</h3>
+            <p>Tier-3 Fabric pipelines for global region readiness.</p>
             <div class="chip-row">
               <span class="chip accent">S360 KPIs</span>
-              <span class="chip">Automation maturity</span>
-              <span class="chip">GeoExpansion</span>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -559,95 +467,64 @@
       <section id="portfolio" class="fade-in">
         <div class="section-header">
           <div class="section-kicker">Portfolio</div>
-          <h2>Systems I’ve shipped — available as a portfolio deck</h2>
+          <h2>Systems I’ve shipped — available as a technical deck</h2>
           <p class="section-description">
-            My technical portfolio is a curated, multi-slide deck walking through architecture, impact, and visuals
-            for the systems I’ve delivered. Below is a preview of the themes it covers.
+            A curated deck walking through architecture, impact, and visuals for the systems I've delivered.
           </p>
         </div>
 
         <div class="portfolio-grid">
           <div class="card">
-            <h3>Security &amp; compliance telemetry</h3>
-            <p>
-              Executive “single pane of glass” views for security posture, incident response, and tool saturation
-              across Microsoft security products and identity platforms.
-            </p>
+            <h3>Security & compliance telemetry</h3>
+            <p>Exec views of posture, incident, and saturation metrics.</p>
             <div class="chip-row">
               <span class="chip accent">M365 Security Health</span>
-              <span class="chip">Zero Trust KPIs</span>
-              <span class="chip">Compliance</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Wave engines &amp; governance models</h3>
-            <p>
-              Multi-wave SFI telemetry models with historical snapshots, burndown charts, and governance-ready audit
-              trails for leadership reviews.
-            </p>
+            <h3>Wave engines & governance</h3>
+            <p>Historical snapshots & burndown models for SFI.</p>
             <div class="chip-row">
               <span class="chip accent">SFI Waves</span>
-              <span class="chip">Governance</span>
-              <span class="chip">Historical views</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Capacity, pipeline &amp; readiness</h3>
-            <p>
-              Integrated capacity and pipeline systems that help engineering and field teams make better decisions
-              on commitments, expansions, and risk.
-            </p>
+            <h3>Capacity & readiness</h3>
+            <p>AVS + MSX combined view for better field decisioning.</p>
             <div class="chip-row">
               <span class="chip accent">AVS Capacity</span>
-              <span class="chip">MSX Pipeline</span>
-              <span class="chip">Readiness</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Firmware, reliability &amp; SLAs</h3>
-            <p>
-              Fleet-level firmware freshness, SLA cycles, and reliability scoring for hardware estates tied to
-              CHIE and platform reliability goals.
-            </p>
+            <h3>Firmware & SLAs</h3>
+            <p>Freshness scoring and SLA cycle management.</p>
             <div class="chip-row">
               <span class="chip accent">Firmware</span>
-              <span class="chip">SLA</span>
-              <span class="chip">Reliability</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Operational &amp; ADO data quality</h3>
-            <p>
-              ADO hygiene, work item validation, and aging trends that improve the quality of the underlying
-              signal feeding dashboards and leadership reporting.
-            </p>
+            <h3>ADO Data Quality</h3>
+            <p>Hygiene dashboards for reliable signal to leadership.</p>
             <div class="chip-row">
               <span class="chip accent">ADO Hygiene</span>
-              <span class="chip">Signal quality</span>
-              <span class="chip">Readiness</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Small business &amp; finance dashboards</h3>
-            <p>
-              Finance and operations dashboards for hospitality and other small businesses, aligning P&amp;Ls,
-              cash flow, and operational metrics into a single, actionable view.
-            </p>
+            <h3>Small business & finance dashboards</h3>
+            <p>P&L-aligned revenue, cash flow, and operations visibility.</p>
             <div class="chip-row">
-              <span class="chip accent">P&amp;L aware</span>
-              <span class="chip">Hospitality</span>
-              <span class="chip">SMB analytics</span>
+              <span class="chip accent">P&L Aware</span>
             </div>
           </div>
         </div>
 
         <div class="hero-actions" style="margin-top:24px;">
-          <a class="btn btn-primary" href="#contact">Request full technical portfolio deck →</a>
+          <a class="btn btn-primary" href="#contact">Request full portfolio →</a>
           <a class="btn btn-ghost" href="#promptive">Explore Promptive Studio</a>
         </div>
       </section>
@@ -656,50 +533,29 @@
       <section id="architecture" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Architecture</div>
-          <h2>How I design telemetry &amp; analytics systems</h2>
+          <h2>How I design telemetry & analytics systems</h2>
           <p class="section-description">
-            My default approach is a Fabric-first, lakehouse-backed architecture with ADX/KQL engines and PBIP semantic
-            models. The goal: governed, reusable, and cost-aware platforms.
+            A Fabric-first, lakehouse-backed architecture with ADX/KQL engines and PBIP semantic models.
           </p>
         </div>
 
         <div class="two-column">
           <div class="highlight-box">
-            <strong>Patterns I reuse across programs</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>
-                <strong>Ingestion (Bronze):</strong> Fabric and/or ADF pipelines with schema contracts, retry logic,
-                and freshness checks.
-              </li>
-              <li>
-                <strong>Transformation (Silver):</strong> KQL + SQL endpoints to standardize entities (User, Device,
-                Incident, Risk Event, Policy, Cluster, SKU).
-              </li>
-              <li>
-                <strong>Modeling (Gold):</strong> star schemas, Direct Lake-ready tables, materialized views, and
-                calculation groups for PBIP.
-              </li>
-              <li>
-                <strong>Visualization:</strong> modular PBIP navigation, shared themes, consistent slicers, and
-                RLS/OLS aligned to org structure.
-              </li>
+            <strong>Patterns I reuse</strong>
+            <ul class="bullet-list">
+              <li><strong>Bronze:</strong> ingestion, schema contracts, retry, freshness</li>
+              <li><strong>Silver:</strong> normalized entities via KQL/SQL</li>
+              <li><strong>Gold:</strong> star schemas, MV layers, calc groups</li>
+              <li><strong>PBIP:</strong> modular nav, themes, slicers, RLS/OLS</li>
             </ul>
           </div>
 
           <div class="highlight-box">
-            <strong>What leaders get from this approach</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>
-                Faster decisions via consolidated, exec-ready dashboards instead of scattered spreadsheets and
-                ad-hoc reports.
-              </li>
-              <li>
-                Lower ADX compute and better performance through pre-aggregations, query optimization, and offloading
-                analytics to Fabric Lakehouse.
-              </li>
-              <li>
-                A repeatable pattern that new regions, orgs, or programs can adopt without reinventing the stack.
-              </li>
+            <strong>What leaders gain</strong>
+            <ul class="bullet-list">
+              <li>Faster decisions through consolidated dashboards</li>
+              <li>Lower compute via optimized pre-aggregations</li>
+              <li>Reusable architecture for new orgs/regions</li>
             </ul>
           </div>
         </div>
@@ -708,28 +564,27 @@
       <!-- JOURNEY & IDENTITY -->
       <section id="journey" class="fade-in">
         <div class="section-header">
-          <div class="section-kicker">Journey &amp; Identity</div>
+          <div class="section-kicker">Journey & Identity</div>
           <h2>Diverse path, unified engineering mindset</h2>
         </div>
 
         <div class="two-column">
           <div class="about-photo-wrapper">
-            <img src="assets/virang-profile.jpeg" alt="Profile Photo" class="about-photo" />
+            <img src="assets/virang-profile.jpeg" class="about-photo" alt="Profile Photo">
           </div>
 
           <div>
-            <h3>Identity &amp; values</h3>
+            <h3>Identity & values</h3>
             <div class="highlight-box">
-              A culturally grounded engineer blending Gujarati roots with modern cloud architecture. I value clarity,
-              reliability, and systems that scale responsibly — whether that’s a Microsoft security platform or a
-              small business P&amp;L.
+              Gujarati roots, medical discipline, entrepreneurial rigor, and cloud engineering combine to form my
+              operating model.
             </div>
 
             <div class="pill-row">
-              <div class="pill strong">Cross-disciplinary thinker</div>
-              <div class="pill">Family-first, low-ego collaborator</div>
-              <div class="pill">Obsessed with clarity &amp; signal</div>
-              <div class="pill">Builder of dashboards &amp; products</div>
+              <div class="pill strong">Cross-disciplinary</div>
+              <div class="pill">Low-ego collaborator</div>
+              <div class="pill">Clarity & signal obsessed</div>
+              <div class="pill">Builder of products</div>
             </div>
           </div>
         </div>
@@ -739,84 +594,68 @@
       <section id="promptive" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Promptive Studio</div>
-          <h2>Product-thinking beyond individual dashboards</h2>
+          <h2>Product-thinking beyond dashboards</h2>
           <p class="section-description">
-            Promptive is my personal studio for building reusable analytics products: PBIP templates, diagnostic kits,
-            and AI-assisted tools that compress the time from raw telemetry to decision-quality insight.
+            Reusable PBIP templates • telemetry kits • diagnostic tools • AI-assisted engineering patterns.
           </p>
         </div>
 
         <div class="two-column">
           <div class="highlight-box">
-            <strong>What I’m building under Promptive</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>
-                <strong>PBIP template systems</strong> for security posture, telemetry readiness, and capacity planning.
-              </li>
-              <li>
-                <strong>Diagnostic kits</strong> for ADX cost/performance tuning, dataset health, and column-level
-                impact analysis.
-              </li>
-              <li>
-                <strong>Pattern libraries</strong> for wave-based governance, firmware freshness scoring, and NRT vs.
-                steady-state telemetry.
-              </li>
+            <strong>What I’m building</strong>
+            <ul class="bullet-list">
+              <li>PBIP templates for posture, readiness, and financial intelligence</li>
+              <li>Diagnostic kits for ADX cost/perf tuning</li>
+              <li>Pattern libraries for SFI, Firmware Freshness, & NRT telemetry</li>
             </ul>
           </div>
 
           <div class="highlight-box">
-            <strong>Why it matters to employers &amp; clients</strong>
-            <ul class="bullet-list" style="margin-top:6px;">
-              <li>
-                You’re not just getting one-off dashboards — you’re getting <strong>systems and starter kits</strong>
-                that can be reused across teams and regions.
-              </li>
-              <li>
-                My default mindset is product-oriented: clear documentation, opinionated defaults, and room to extend.
-              </li>
-              <li>
-                This makes onboarding faster, handoffs cleaner, and long-term ownership easier for your internal teams.
-              </li>
+            <strong>Why it matters</strong>
+            <ul class="bullet-list">
+              <li>Your teams get reusable systems, not one-offs</li>
+              <li>Clear documentation + opinionated defaults</li>
+              <li>Fast onboarding, clean handoffs, scalable ownership</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- SKILLS & STACK -->
+      <!-- SKILLS -->
       <section id="skills" class="compact fade-in">
         <div class="section-header">
-          <div class="section-kicker">Skills &amp; Stack</div>
+          <div class="section-kicker">Skills & Stack</div>
           <h2>What I work with day-to-day</h2>
         </div>
 
         <div class="two-column">
           <div>
-            <h3>Core engineering stack</h3>
+            <h3>Core Engineering Stack</h3>
             <div class="pill-row">
               <div class="pill strong">Microsoft Fabric</div>
               <div class="pill strong">ADX / Kusto</div>
               <div class="pill strong">Power BI PBIP</div>
               <div class="pill">Direct Lake</div>
-              <div class="pill">Lakehouse &amp; SQL Endpoint</div>
-              <div class="pill">ADF &amp; Fabric Pipelines</div>
-              <div class="pill">Star Schemas &amp; MVs</div>
-              <div class="pill">DAX &amp; calc groups</div>
+              <div class="pill">Lakehouse</div>
+              <div class="pill">ADF/Fabric Pipelines</div>
+              <div class="pill">Star Schemas</div>
+              <div class="pill">DAX</div>
               <div class="pill">Tableau (since 2013)</div>
-              <div class="pill">Python &amp; SQL</div>
+              <div class="pill">Python & SQL</div>
             </div>
           </div>
 
           <div>
-            <h3>Security, operations &amp; leadership</h3>
+            <h3>Security & Leadership</h3>
             <div class="pill-row">
-              <div class="pill strong">Secure Score &amp; SFI</div>
-              <div class="pill">Defender, Entra, Intune, Purview</div>
-              <div class="pill">S360 KPIs &amp; governance</div>
-              <div class="pill">AVS &amp; capacity telemetry</div>
-              <div class="pill">Telemetry cost/perf tuning</div>
-              <div class="pill">Azure DevOps &amp; Git</div>
-              <div class="pill">Executive storytelling</div>
-              <div class="pill">Operator &amp; educator</div>
+              <div class="pill strong">Secure Score / SFI</div>
+              <div class="pill">Defender / Entra / Intune / Purview</div>
+              <div class="pill">S360 KPIs</div>
+              <div class="pill">AVS Capacity</div>
+              <div class="pill">Telemetry Cost/Perf</div>
+              <div class="pill">Azure DevOps</div>
+              <div class="pill">Leadership Reporting</div>
+              <div class="pill">Educator / Operator</div>
             </div>
           </div>
         </div>
@@ -826,39 +665,35 @@
       <section id="contact" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Contact</div>
-          <h2>Let’s talk about your telemetry, P&amp;L, and data roadmap</h2>
+          <h2>Let’s talk about your telemetry, P&L, and data roadmap</h2>
           <p class="section-description">
-            I’m remote-first with a production-grade home setup, open to senior data engineering roles and select
-            consulting engagements where Fabric, ADX, PBIP, or financial/operational analytics are central to the
-            mission.
+            Remote-first with a fully equipped production-grade home setup.
+            Open to senior engineering roles and select consulting engagements.
           </p>
         </div>
 
         <div class="contact-row">
           <div class="contact-item">
-            📧 <strong>Email:</strong>
-            <a href="mailto:virang@virangpatel.ai">virang@virangpatel.ai</a>
+            📧 <strong>Email:</strong> <a href="mailto:virang@virangpatel.ai">virang@virangpatel.ai</a>
           </div>
+
           <div class="contact-item">
             🔗 <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/iamvirang" target="_blank" rel="noopener">
-              linkedin.com/in/iamvirang
-            </a>
+            <a href="https://www.linkedin.com/in/iamvirang" target="_blank">linkedin.com/in/iamvirang</a>
           </div>
+
           <div class="contact-item">
-            💼 <strong>Teams / Microsoft 365:</strong>
-            Available via <code>virang@virangpatel.ai</code> for interviews and working sessions.
+            💼 <strong>M365 / Teams:</strong> Available at <code>virang@virangpatel.ai</code>
           </div>
+
           <div class="contact-item">
-            📄 <strong>Resume &amp; Portfolio:</strong> full resume and technical portfolio deck available on request
-            or via application packages.
+            📄 <strong>Portfolio:</strong> available on request
           </div>
         </div>
 
         <div class="hero-actions" style="margin-top:18px;">
-          <a class="btn btn-primary" href="mailto:virang@virangpatel.ai?subject=Telemetry%20%26%20Data%20Engagement">
-            Start a conversation →
-          </a>
+          <a class="btn btn-primary"
+            href="mailto:virang@virangpatel.ai?subject=Telemetry%20%26%20Data%20Engagement">Start a conversation →</a>
           <a class="btn btn-ghost" href="#top">Back to top</a>
         </div>
       </section>
@@ -869,6 +704,9 @@
       © <span id="year"></span> Virang Patel · virangpatel.ai
     </footer>
   </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <div id="backToTop">↑</div>
 
   <!-- JS -->
   <script src="js/animations.js"></script>
