@@ -1,35 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ============================================================
-     ELEMENT QUERIES
+     ELEMENT REFERENCES
   ============================================================ */
   const header = document.querySelector("header");
   const backToTop = document.getElementById("backToTop");
   const sections = document.querySelectorAll("section[id]");
   const fadeElements = document.querySelectorAll(".fade-in");
-  const navLinks = document.querySelectorAll("nav a");
   const navToggle = document.getElementById("navToggle");
-  const siteNav = document.getElementById("siteNav");
+  const overlay = document.getElementById("navOverlay");
+  const overlayLinks = overlay ? overlay.querySelectorAll("a") : [];
+  const navLinks = document.querySelectorAll("nav a, #navOverlay a");
+
   const heroPhoto = document.querySelector(".hero-photo");
   const heroPhotoWrapper = document.querySelector(".hero-photo-wrapper");
   const metricStrip = document.querySelector(".metric-strip");
   const typedEl = document.getElementById("hero-typed");
 
   /* ============================================================
-     1) STICKY HEADER SHRINK
+     1) HEADER SHRINK
   ============================================================ */
   const handleHeaderShrink = () => {
-    if (!header) return;
-    if (window.scrollY > 50) {
-      header.classList.add("shrink");
-    } else {
-      header.classList.remove("shrink");
-    }
+    if (window.scrollY > 50) header.classList.add("shrink");
+    else header.classList.remove("shrink");
   };
 
   /* ============================================================
-     2) UNIFIED INTERSECTION OBSERVER
-        - Fade-in sections
-        - Scroll-spy active nav
+     2) FADE-IN + SCROLL-SPY
   ============================================================ */
   const observerOptions = {
     threshold: 0.18,
@@ -41,18 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const target = entry.target;
       const id = target.getAttribute("id");
 
-      // Fade-in effect
+      // Fade-in
       if (entry.isIntersecting && target.classList.contains("fade-in")) {
         target.classList.add("visible");
       }
 
-      // Scroll-spy: highlight active section in nav
+      // Scroll-spy
       if (entry.isIntersecting && id) {
-        navLinks.forEach((link) => link.classList.remove("active"));
-        const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-        if (activeLink) {
-          activeLink.classList.add("active");
-        }
+        navLinks.forEach((l) => l.classList.remove("active"));
+        const active = document.querySelector(`a[href="#${id}"]`);
+        if (active) active.classList.add("active");
       }
     });
   }, observerOptions);
@@ -61,72 +55,99 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((sec) => unifiedObserver.observe(sec));
 
   /* ============================================================
-     3) BACK-TO-TOP BUTTON
+     3) BACK TO TOP
   ============================================================ */
-  const handleBackToTopVisibility = () => {
-    if (!backToTop) return;
-    if (window.scrollY > 420) {
-      backToTop.classList.add("visible");
-    } else {
-      backToTop.classList.remove("visible");
-    }
+  const handleBackToTop = () => {
+    if (window.scrollY > 420) backToTop.classList.add("visible");
+    else backToTop.classList.remove("visible");
   };
 
   if (backToTop) {
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    backToTop.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    );
   }
 
   /* ============================================================
-     4) PARALLAX HERO & METRIC STRIP
+     4) PARALLAX HERO + METRICS
   ============================================================ */
   let ticking = false;
 
-  const handleParallax = () => {
-    if (!heroPhotoWrapper && !metricStrip) return;
+  const parallax = () => {
+    const y = window.scrollY;
+    const f = Math.min(y / 400, 1);
 
-    const scrollY = window.scrollY;
-    const factor = Math.min(scrollY / 400, 1); // clamp 0–1
-
-    // Subtle float on hero photo
     if (heroPhotoWrapper) {
-      heroPhotoWrapper.style.transform = `translateY(${factor * 12}px)`;
+      heroPhotoWrapper.style.transform = `translateY(${f * 12}px)`;
     }
 
-    // Slight drift on metrics
     if (metricStrip) {
-      metricStrip.style.transform = `translateY(${factor * -6}px)`;
+      metricStrip.style.transform = `translateY(${f * -6}px)`;
     }
 
     ticking = false;
   };
 
-  const handleScroll = () => {
+  const onScroll = () => {
     handleHeaderShrink();
-    handleBackToTopVisibility();
+    handleBackToTop();
 
     if (!ticking) {
-      window.requestAnimationFrame(() => {
-        handleParallax();
-      });
+      window.requestAnimationFrame(parallax);
       ticking = true;
     }
   };
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", onScroll);
 
   /* ============================================================
-     5) MOBILE NAV (HAMBURGER) TOGGLE
+     5) FULLSCREEN OVERLAY MOBILE NAV (Option B)
   ============================================================ */
-  if (navToggle && siteNav) {
+  const openOverlay = () => {
+    if (!overlay) return;
+
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+
+    // Stagger fade-in of links
+    overlayLinks.forEach((link, i) => {
+      setTimeout(() => link.classList.add("visible"), 100 + i * 80);
+    });
+  };
+
+  const closeOverlay = () => {
+    if (!overlay) return;
+
+    overlayLinks.forEach((link) => link.classList.remove("visible"));
+
+    setTimeout(() => {
+      overlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }, 220);
+  };
+
+  if (navToggle) {
     navToggle.addEventListener("click", () => {
-      const isOpen = document.body.classList.toggle("nav-open");
-      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (overlay.classList.contains("open")) closeOverlay();
+      else openOverlay();
     });
   }
 
-  // Smooth scroll for nav links with header offset
+  // Close overlay when clicking any link
+  overlayLinks.forEach((link) => {
+    link.addEventListener("click", () => closeOverlay());
+  });
+
+  // Clicking the dim background closes overlay
+  if (overlay) {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeOverlay();
+    });
+  }
+
+  /* ============================================================
+     6) SMOOTH SCROLL FOR ALL NAV LINKS
+  ============================================================ */
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
     if (!href || !href.startsWith("#")) return;
@@ -136,25 +157,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!target) return;
 
       e.preventDefault();
-      const headerOffset = 90;
+      const offset = 90;
       const rect = target.getBoundingClientRect();
-      const targetY = rect.top + window.scrollY - headerOffset;
+      const y = rect.top + window.scrollY - offset;
 
-      window.scrollTo({
-        top: targetY,
-        behavior: "smooth"
-      });
-
-      // Close mobile nav after click
-      if (window.innerWidth <= 900) {
-        document.body.classList.remove("nav-open");
-        navToggle && navToggle.setAttribute("aria-expanded", "false");
-      }
+      window.scrollTo({ top: y, behavior: "smooth" });
     });
   });
 
   /* ============================================================
-     6) HERO PHOTO REVEAL
+     7) HERO PHOTO REVEAL
   ============================================================ */
   if (heroPhoto) {
     setTimeout(() => {
@@ -163,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ============================================================
-     7) TYPEWRITER EFFECT
+     8) TYPEWRITER EFFECT
   ============================================================ */
   const heroText =
     "I build security & telemetry systems that Microsoft teams rely on.";
@@ -181,12 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ============================================================
-     8) SERVICE CARD HOVER LIFT (CSS-driven, JS not required)
-        - Left here for future interaction hooks if needed
-  ============================================================ */
-
-  /* ============================================================
-     9) ORIENTATION CHANGE / MOBILE BOUNCE FIX
+     9) ORIENTATION FIX
   ============================================================ */
   window.addEventListener("orientationchange", () => {
     setTimeout(() => {
