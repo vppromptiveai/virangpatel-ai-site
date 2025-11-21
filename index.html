@@ -29,23 +29,43 @@
       </div>
 
       <!-- MOBILE NAV TOGGLE -->
-      <button id="navToggle">☰</button>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
 
-      <!-- NAVIGATION -->
-      <nav id="mainNav">
+      <!-- DESKTOP NAVIGATION -->
+      <nav id="mainNav" class="main-nav">
         <a href="#about">About</a>
         <a href="#experience">Trajectory</a>
         <a href="#expertise">Expertise</a>
+        <a href="#services">Services</a>
         <a href="#impact">Microsoft Impact</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#architecture">Architecture</a>
-        <a href="#journey">Journey & Identity</a>
+        <a href="#journey">Journey &amp; Identity</a>
         <a href="#promptive">Promptive Studio</a>
         <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
+    <!-- MOBILE NAV OVERLAY -->
+    <div id="navOverlay" class="nav-overlay">
+      <nav class="nav-overlay-menu">
+        <a href="#about">About</a>
+        <a href="#experience">Trajectory</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#services">Services</a>
+        <a href="#impact">Microsoft Impact</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#journey">Journey &amp; Identity</a>
+        <a href="#promptive">Promptive Studio</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 
     <main>
 
@@ -77,20 +97,30 @@
             </div>
 
             <div class="metric-strip">
-              <div class="metric-pill"><span class="metric-label">Secure Score</span><span class="metric-value">+14
-                  pts</span></div>
-              <div class="metric-pill"><span class="metric-label">MTTR</span><span class="metric-value">–38%</span>
+              <div class="metric-pill">
+                <span class="metric-label">Secure Score</span>
+                <span class="metric-value">+14 pts</span>
               </div>
-              <div class="metric-pill"><span class="metric-label">Load Time</span><span class="metric-value">–45%</span>
+              <div class="metric-pill">
+                <span class="metric-label">MTTR</span>
+                <span class="metric-value">–38%</span>
               </div>
-              <div class="metric-pill"><span class="metric-label">ADX Compute</span><span
-                  class="metric-value">–40%</span></div>
-              <div class="metric-pill"><span class="metric-label">Manual Ops</span><span
-                  class="metric-value">–70%</span></div>
+              <div class="metric-pill">
+                <span class="metric-label">Load Time</span>
+                <span class="metric-value">–45%</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-label">ADX Compute</span>
+                <span class="metric-value">–40%</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-label">Manual Ops</span>
+                <span class="metric-value">–70%</span>
+              </div>
             </div>
           </div>
 
-          <!-- HERO RIGHT PHOTO -->
+          <!-- HERO RIGHT PHOTO + CARD -->
           <div class="hero-right">
             <div class="hero-photo-wrapper">
               <img src="assets/virang-hero.jpeg" alt="Professional Photo" class="hero-photo" />
@@ -105,31 +135,30 @@
                 <div class="pill-soft">Remote-first • L62/L63-ready</div>
               </div>
 
-              <div class="hero-arch-diagram">
-                [ Source Systems ]
-                S360 • Defender • Entra • Intune • Purview • AVS • Hopper NRT
+              <!-- Restored monospaced black-box diagram -->
+              <pre class="hero-arch-diagram">[ Source Systems ]
+S360 • Defender • Entra • Intune • Purview • AVS • Hopper NRT
 
-                ↓
-                [ Fabric Pipelines ]
-                Bronze → Silver → Gold
-                schema contracts • validation • snapshots
+↓
+[ Fabric Pipelines ]
+Bronze → Silver → Gold
+schema contracts • validation • snapshots
 
-                ↓
-                [ ADX / KQL Engine ]
-                pre-aggregations • cleansing functions • MVs
+↓
+[ ADX / KQL Engine ]
+pre-aggregations • cleansing functions • MVs
 
-                ↓
-                [ Lakehouse / SQL Endpoint ]
-                star schemas • DirectLake • semantic models
+↓
+[ Lakehouse / SQL Endpoint ]
+star schemas • DirectLake • semantic models
 
-                ↓
-                [ Power BI PBIP ]
-                modular nav • calc groups • RLS/OLS
+↓
+[ Power BI PBIP ]
+modular nav • calc groups • RLS/OLS
 
-                ↓
-                [ Executive Dashboards ]
-                security • reliability • capacity • buildout automation
-              </div>
+↓
+[ Executive Dashboards ]
+security • reliability • capacity • buildout automation</pre>
             </div>
           </div>
         </div>
@@ -184,9 +213,9 @@
       <section id="experience" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Trajectory</div>
-          <h2>How engineering, finance & ownership intersect for me</h2>
+          <h2>How engineering, finance &amp; ownership intersect for me</h2>
           <p class="section-description">
-            My work is shaped by telemetry, P&Ls, operational models, and ownership mindset. Whether engineering for
+            My work is shaped by telemetry, P&amp;Ls, operational models, and ownership mindset. Whether engineering for
             Microsoft,
             operating hotels, or advising small businesses — I treat data as a living system tied to risk, cost, and
             opportunity.
@@ -197,8 +226,9 @@
 
           <!-- PHASE 1 -->
           <div class="timeline-item">
-            <h3>Current · Senior Data Engineer & Fabric Architect</h3>
-            <p>I design telemetry systems the way a CFO reads a P&L — every signal tied to risk, cost, and opportunity.
+            <h3>Current · Senior Data Engineer &amp; Fabric Architect</h3>
+            <p>I design telemetry systems the way a CFO reads a P&amp;L — every signal tied to risk, cost, and
+              opportunity.
             </p>
             <ul class="bullet-list">
               <li>Gov-ready “income statements” for Secure Score, MTTR, capacity, reliability.</li>
@@ -209,7 +239,7 @@
 
           <!-- PHASE 2 -->
           <div class="timeline-item">
-            <h3>Ongoing · Data & BI Consultant</h3>
+            <h3>Ongoing · Data &amp; BI Consultant</h3>
             <p>Since the early 2010s I've built analytics for finance, healthcare, hospitality, and SMBs.</p>
             <ul class="bullet-list">
               <li>Tableau + Power BI for real-world revenue, cash, and operations.</li>
@@ -223,9 +253,9 @@
             <h3>Promptive Studio · Analytics Products</h3>
             <p>I build reusable PBIP templates, diagnostic kits, and telemetry packs.</p>
             <ul class="bullet-list">
-              <li>PBIP templates for posture, readiness, financial intelligence.</li>
-              <li>Diagnostic tools surfacing cost leaks & signal quality issues.</li>
-              <li>Reusable architectures for multiple businesses & orgs.</li>
+              <li>PBIP templates for posture, readiness, and financial intelligence.</li>
+              <li>Diagnostic tools surfacing cost leaks &amp; signal quality issues.</li>
+              <li>Reusable architectures for multiple businesses &amp; orgs.</li>
             </ul>
           </div>
 
@@ -234,7 +264,7 @@
             <h3>Entrepreneur · Hotels, Operations, Web</h3>
             <p>Before deep cloud engineering, I operated a hotel portfolio across the US.</p>
             <ul class="bullet-list">
-              <li>Daily P&L, occupancy, ADR, RevPAR, labor ratios.</li>
+              <li>Daily P&amp;L, occupancy, ADR, RevPAR, labor ratios.</li>
               <li>Hospitality websites + reporting aligned to ownership goals.</li>
               <li>Deep instinct for how pricing + operations drive asset value.</li>
             </ul>
@@ -245,8 +275,8 @@
             <h3>Foundation · Medical Training</h3>
             <p>I approach telemetry like physiology: inputs → thresholds → interventions.</p>
             <ul class="bullet-list">
-              <li>Diagnostic mindset applied to engineering & finance.</li>
-              <li>Clear narratives about risk & system behavior.</li>
+              <li>Diagnostic mindset applied to engineering &amp; finance.</li>
+              <li>Clear narratives about risk &amp; system behavior.</li>
               <li>Calm decision-making under pressure.</li>
             </ul>
           </div>
@@ -255,7 +285,7 @@
 
         <div class="hero-actions" style="margin-top:20px;">
           <a class="btn btn-primary" href="#portfolio">See how this shows up in my work →</a>
-          <a class="btn btn-ghost" href="#contact">Talk about your P&L & data needs</a>
+          <a class="btn btn-ghost" href="#contact">Talk about your P&amp;L &amp; data needs</a>
         </div>
       </section>
 
@@ -271,9 +301,9 @@
 
         <div class="two-column">
           <div class="highlight-box">
-            <strong>Fabric & Lakehouse Architecture</strong>
+            <strong>Fabric &amp; Lakehouse Architecture</strong>
             <ul class="bullet-list">
-              <li>Leader–Follower lakehouse ingestion & compute offloading</li>
+              <li>Leader–Follower lakehouse ingestion &amp; compute offloading</li>
               <li>Bronze → Silver → Gold with contracts, validation, freshness</li>
               <li>Star schemas, DirectLake, incremental snapshots</li>
               <li>Fabric pipelines for posture, field, and reliability telemetry</li>
@@ -289,7 +319,7 @@
           <div class="highlight-box">
             <strong>ADX / Kusto Engineering</strong>
             <ul class="bullet-list">
-              <li>KQL pre-aggregations & materialized views</li>
+              <li>KQL pre-aggregations &amp; materialized views</li>
               <li>Identity/device/incident/risk event normalization</li>
               <li>Multi-cluster ingestion, macros, dynamic functions</li>
               <li>Compute reduction: caches, summarization, reuse layers</li>
@@ -307,10 +337,10 @@
           <div class="highlight-box">
             <strong>PBIP Engineering</strong>
             <ul class="bullet-list">
-              <li>Modular PBIP structures & navigation systems</li>
+              <li>Modular PBIP structures &amp; navigation systems</li>
               <li>Calc groups, metrics layers, RLS/OLS governance</li>
               <li>DirectLake models optimized sub-2s</li>
-              <li>Exec reporting for security & ops V-teams</li>
+              <li>Exec reporting for security &amp; ops V-teams</li>
             </ul>
             <div class="pill-row">
               <div class="pill strong">PBIP</div>
@@ -321,12 +351,12 @@
           </div>
 
           <div class="highlight-box">
-            <strong>Security & Telemetry Systems</strong>
+            <strong>Security &amp; Telemetry Systems</strong>
             <ul class="bullet-list">
               <li>Defender, Entra, Intune, Purview, Policy telemetry modeling</li>
               <li>SFI Waves + snapshot history engines</li>
               <li>AVS + MSX capacity/pipeline alignment</li>
-              <li>Firmware Freshness & buildout automation</li>
+              <li>Firmware Freshness &amp; buildout automation</li>
             </ul>
             <div class="pill-row">
               <div class="pill strong">Secure Score</div>
@@ -356,7 +386,7 @@
 
         <div class="two-column">
           <div class="highlight-box">
-            <strong>Telemetry, Security & Data Engineering</strong>
+            <strong>Telemetry, Security &amp; Data Engineering</strong>
             <ul class="bullet-list">
               <li>Fabric lakehouse design • ADX engines • PBIP models</li>
               <li>Security posture dashboards (Secure Score, SFI)</li>
@@ -371,15 +401,15 @@
           </div>
 
           <div class="highlight-box">
-            <strong>Business & Finance Systems</strong>
+            <strong>Business &amp; Finance Systems</strong>
             <ul class="bullet-list">
-              <li>P&L-aware dashboards that reconcile to actuals</li>
-              <li>Revenue, cash-flow & operational KPIs</li>
-              <li>Tableau + Power BI across hospitality & SMBs</li>
+              <li>P&amp;L-aware dashboards that reconcile to actuals</li>
+              <li>Revenue, cash-flow &amp; operational KPIs</li>
+              <li>Tableau + Power BI across hospitality &amp; SMBs</li>
               <li>Asset performance, pricing, operational efficiency tools</li>
             </ul>
             <div class="pill-row">
-              <div class="pill strong">P&L Analysis</div>
+              <div class="pill strong">P&amp;L Analysis</div>
               <div class="pill">Cash-flow IQ</div>
               <div class="pill">SMB Analytics</div>
               <div class="pill">Hospitality</div>
@@ -404,7 +434,6 @@
         </div>
 
         <div class="portfolio-grid">
-          <!-- CARDS (unchanged) -->
           <div class="card">
             <h3>M365 Security Health Dashboard</h3>
             <p>Unified security telemetry across the ecosystem.</p>
@@ -435,7 +464,7 @@
           </div>
 
           <div class="card">
-            <h3>AVS Capacity & MSX Pipeline</h3>
+            <h3>AVS Capacity &amp; MSX Pipeline</h3>
             <p>Combining field capacity telemetry with pipeline signals.</p>
             <div class="chip-row">
               <span class="chip accent">AVS</span>
@@ -459,7 +488,6 @@
               <span class="chip accent">S360 KPIs</span>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -475,7 +503,7 @@
 
         <div class="portfolio-grid">
           <div class="card">
-            <h3>Security & compliance telemetry</h3>
+            <h3>Security &amp; compliance telemetry</h3>
             <p>Exec views of posture, incident, and saturation metrics.</p>
             <div class="chip-row">
               <span class="chip accent">M365 Security Health</span>
@@ -483,15 +511,15 @@
           </div>
 
           <div class="card">
-            <h3>Wave engines & governance</h3>
-            <p>Historical snapshots & burndown models for SFI.</p>
+            <h3>Wave engines &amp; governance</h3>
+            <p>Historical snapshots &amp; burndown models for SFI.</p>
             <div class="chip-row">
               <span class="chip accent">SFI Waves</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Capacity & readiness</h3>
+            <h3>Capacity &amp; readiness</h3>
             <p>AVS + MSX combined view for better field decisioning.</p>
             <div class="chip-row">
               <span class="chip accent">AVS Capacity</span>
@@ -499,7 +527,7 @@
           </div>
 
           <div class="card">
-            <h3>Firmware & SLAs</h3>
+            <h3>Firmware &amp; SLAs</h3>
             <p>Freshness scoring and SLA cycle management.</p>
             <div class="chip-row">
               <span class="chip accent">Firmware</span>
@@ -515,10 +543,10 @@
           </div>
 
           <div class="card">
-            <h3>Small business & finance dashboards</h3>
-            <p>P&L-aligned revenue, cash flow, and operations visibility.</p>
+            <h3>Small business &amp; finance dashboards</h3>
+            <p>P&amp;L-aligned revenue, cash flow, and operations visibility.</p>
             <div class="chip-row">
-              <span class="chip accent">P&L Aware</span>
+              <span class="chip accent">P&amp;L Aware</span>
             </div>
           </div>
         </div>
@@ -533,7 +561,7 @@
       <section id="architecture" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Architecture</div>
-          <h2>How I design telemetry & analytics systems</h2>
+          <h2>How I design telemetry &amp; analytics systems</h2>
           <p class="section-description">
             A Fabric-first, lakehouse-backed architecture with ADX/KQL engines and PBIP semantic models.
           </p>
@@ -564,7 +592,7 @@
       <!-- JOURNEY & IDENTITY -->
       <section id="journey" class="fade-in">
         <div class="section-header">
-          <div class="section-kicker">Journey & Identity</div>
+          <div class="section-kicker">Journey &amp; Identity</div>
           <h2>Diverse path, unified engineering mindset</h2>
         </div>
 
@@ -574,7 +602,7 @@
           </div>
 
           <div>
-            <h3>Identity & values</h3>
+            <h3>Identity &amp; values</h3>
             <div class="highlight-box">
               Gujarati roots, medical discipline, entrepreneurial rigor, and cloud engineering combine to form my
               operating model.
@@ -583,7 +611,7 @@
             <div class="pill-row">
               <div class="pill strong">Cross-disciplinary</div>
               <div class="pill">Low-ego collaborator</div>
-              <div class="pill">Clarity & signal obsessed</div>
+              <div class="pill">Clarity &amp; signal obsessed</div>
               <div class="pill">Builder of products</div>
             </div>
           </div>
@@ -606,7 +634,7 @@
             <ul class="bullet-list">
               <li>PBIP templates for posture, readiness, and financial intelligence</li>
               <li>Diagnostic kits for ADX cost/perf tuning</li>
-              <li>Pattern libraries for SFI, Firmware Freshness, & NRT telemetry</li>
+              <li>Pattern libraries for SFI, Firmware Freshness, &amp; NRT telemetry</li>
             </ul>
           </div>
 
@@ -624,7 +652,7 @@
       <!-- SKILLS -->
       <section id="skills" class="compact fade-in">
         <div class="section-header">
-          <div class="section-kicker">Skills & Stack</div>
+          <div class="section-kicker">Skills &amp; Stack</div>
           <h2>What I work with day-to-day</h2>
         </div>
 
@@ -641,12 +669,12 @@
               <div class="pill">Star Schemas</div>
               <div class="pill">DAX</div>
               <div class="pill">Tableau (since 2013)</div>
-              <div class="pill">Python & SQL</div>
+              <div class="pill">Python &amp; SQL</div>
             </div>
           </div>
 
           <div>
-            <h3>Security & Leadership</h3>
+            <h3>Security &amp; Leadership</h3>
             <div class="pill-row">
               <div class="pill strong">Secure Score / SFI</div>
               <div class="pill">Defender / Entra / Intune / Purview</div>
@@ -665,7 +693,7 @@
       <section id="contact" class="compact fade-in">
         <div class="section-header">
           <div class="section-kicker">Contact</div>
-          <h2>Let’s talk about your telemetry, P&L, and data roadmap</h2>
+          <h2>Let’s talk about your telemetry, P&amp;L, and data roadmap</h2>
           <p class="section-description">
             Remote-first with a fully equipped production-grade home setup.
             Open to senior engineering roles and select consulting engagements.
@@ -679,7 +707,7 @@
 
           <div class="contact-item">
             🔗 <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/iamvirang" target="_blank">linkedin.com/in/iamvirang</a>
+            <a href="https://www.linkedin.com/in/iamvirang" target="_blank" rel="noopener">linkedin.com/in/iamvirang</a>
           </div>
 
           <div class="contact-item">
