@@ -1,88 +1,88 @@
+// Enhanced animations & UX engine for virangpatel.ai
 document.addEventListener("DOMContentLoaded", () => {
-  // ---------------------------------------------------
-  // Sticky Header Shrink
-  // ---------------------------------------------------
+  /* ============================================================
+     1) STICKY HEADER SHRINK
+  ============================================================ */
   const header = document.querySelector("header");
 
-  window.addEventListener("scroll", () => {
+  const handleHeaderShrink = () => {
     if (!header) return;
     if (window.scrollY > 50) {
       header.classList.add("shrink");
     } else {
       header.classList.remove("shrink");
     }
-  });
+  };
+  window.addEventListener("scroll", handleHeaderShrink);
 
-  // ---------------------------------------------------
-  // Fade-in Sections on Scroll
-  // ---------------------------------------------------
-  const fadeObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.18 }
-  );
+  /* ============================================================
+     2) INTERSECTION OBSERVER (Fade-in + Section Activation)
+  ============================================================ */
+  const observerOptions = {
+    threshold: 0.18,
+    rootMargin: "0px 0px -10% 0px",
+  };
 
-  document.querySelectorAll(".fade-in").forEach(section => {
-    fadeObserver.observe(section);
-  });
-
-  // ---------------------------------------------------
-  // Scroll-Spy Navigation
-  // ---------------------------------------------------
+  const fadeElements = document.querySelectorAll(".fade-in");
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("nav a");
 
-  window.addEventListener("scroll", () => {
-    let currentId = "";
+  const unifiedObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
 
-    sections.forEach(section => {
-      const offsetTop = section.offsetTop - 220;
-      if (window.scrollY >= offsetTop) {
-        currentId = section.getAttribute("id");
+      // Fade-in visibility
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+
+      // Scroll-spy nav highlight
+      if (entry.isIntersecting && id) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+        if (activeLink) activeLink.classList.add("active");
       }
     });
+  }, observerOptions);
 
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      const href = link.getAttribute("href");
-      if (currentId && href && href.includes(`#${currentId}`)) {
-        link.classList.add("active");
-      }
-    });
-  });
+  fadeElements.forEach((el) => unifiedObserver.observe(el));
+  sections.forEach((sec) => unifiedObserver.observe(sec));
 
-  // ---------------------------------------------------
-  // Back to Top Visibility
-  // ---------------------------------------------------
+  /* ============================================================
+     3) BACK-TO-TOP BUTTON BEHAVIOR
+  ============================================================ */
   const backToTop = document.getElementById("backToTop");
 
-  window.addEventListener("scroll", () => {
+  const handleBackToTop = () => {
     if (!backToTop) return;
-    if (window.scrollY > 500) {
+    if (window.scrollY > 420) {
       backToTop.classList.add("visible");
     } else {
       backToTop.classList.remove("visible");
     }
-  });
+  };
+  window.addEventListener("scroll", handleBackToTop);
 
-  // ---------------------------------------------------
-  // Hero Photo Reveal
-  // ---------------------------------------------------
+  /* Smooth scroll for the button */
+  if (backToTop) {
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* ============================================================
+     4) HERO PHOTO REVEAL
+  ============================================================ */
   const heroPhoto = document.querySelector(".hero-photo");
   if (heroPhoto) {
     setTimeout(() => {
       heroPhoto.classList.add("visible");
-    }, 350);
+    }, 300);
   }
 
-  // ---------------------------------------------------
-  // Typewriter Effect for Hero Headline
-  // ---------------------------------------------------
+  /* ============================================================
+     5) TYPEWRITER EFFECT (Improved)
+  ============================================================ */
   const typedEl = document.getElementById("hero-typed");
   const heroText =
     "I build security & telemetry systems that Microsoft teams rely on.";
@@ -96,6 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(typeWriter, 22);
       }
     };
-    setTimeout(typeWriter, 500);
+
+    // Safer delay for mobile + low-power devices
+    setTimeout(typeWriter, 450);
   }
+
+  /* ============================================================
+     6) MOBILE OPTIMIZATION: Auto-close keyboard scroll bounce fix
+     (prevents weird mobile scrolling offsets)
+  ============================================================ */
+  window.addEventListener("orientationchange", () => {
+    setTimeout(() => window.scrollTo(0, window.scrollY), 200);
+  });
 });
