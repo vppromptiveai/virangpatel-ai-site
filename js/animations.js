@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
      ELEMENT REFERENCES
   ============================================================ */
   const header = document.querySelector("header");
+  const siteNav = document.getElementById("mainNav");
   const backToTop = document.getElementById("backToTop");
   const sections = document.querySelectorAll("section[id]");
   const fadeElements = document.querySelectorAll(".fade-in");
